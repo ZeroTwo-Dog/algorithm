@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by park
  * 2021-08-14
  */
-public class ex3_1 {
+public class Ex3_1 {
 
   public static void main(String[] args) {
     //잔돈입력
