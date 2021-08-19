@@ -3,12 +3,12 @@ package chapter03;
 import java.util.Scanner;
 
 /**
+ * 1이 될때까지 작업
  * Created by park on 2021/08/19.
  */
 public class Ex3_4 {
 
   public static void main(String[] args) {
-    //1이 될때까지 작업
     // 1. n-1
     // 2. n/k
     // 두가지 방법으로 최소 횟수 구하기
