@@ -3,6 +3,7 @@ package chapter04;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 /**
  * Created by park on 2021/08/19.
