@@ -54,11 +54,7 @@
 
 
 ## 진행표
+- https://gusty-tarragon-64d.notion.site/2021-7e4c6c8714a4422091544484177eeff9
 
-### 8월 2주차
-
-- 리드미 작성
-- 이북 구매
-- 알고리즘 개발세팅
-- 그리드 예제 3-1
-
+## Commit Convention
+- https://gusty-tarragon-64d.notion.site/Commit-Message-Convention-299cb9cfc4854f2f9690937293abaa1c
