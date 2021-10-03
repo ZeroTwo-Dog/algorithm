@@ -12,10 +12,10 @@ public class Ex5_4 {
   private final static int[][] graph = new int[200][200];
   private static int count = 0;
 
-  private static void bfs (int x , int y, int n, int m) {
+  private static void bfs(int n, int m) {
     Queue<int[]> queue = new LinkedList<>();
     //초기 위치 세팅
-    int[] yx = new int[]{x, y};
+    int[] yx = new int[]{1, 1};
     queue.offer(yx);
 
     while (!queue.isEmpty()) {
@@ -63,7 +63,7 @@ public class Ex5_4 {
         graph[i][j] = str.charAt(j-1) - '0';
       }
     }
-    bfs(1, 1 ,n, m);
+    bfs(n, m);
     System.out.println(count);
 
   }

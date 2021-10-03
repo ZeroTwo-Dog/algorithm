@@ -7,7 +7,7 @@ import java.util.Collections;
  * 이진탐색 기초 binarySearch
  * Created by park on 2021/09/22.
  */
-public class Ex7_1 {
+public class Ex7_1_review_required {
   public static boolean binarySearch (int start, int end, int[] arr, int target) {
 
     if (start > end) {
