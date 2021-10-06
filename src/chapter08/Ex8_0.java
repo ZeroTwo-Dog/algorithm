@@ -4,7 +4,7 @@ package chapter08;
  * 파보나치 수열
  * Created by park on 2021/10/06.
  */
-public class Ex08_0 {
+public class Ex8_0 {
 
   final static int[] arr = new int[99];
   public static int pibo(int x) {
