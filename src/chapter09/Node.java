@@ -6,7 +6,7 @@ import java.util.Comparator;
  * Node
  * Created by park on 2021/10/13.
  */
-class Node implements Comparator<Node> {
+class Node implements Comparable <Node> {
 
   private int index;
   private int distance;
@@ -26,16 +26,8 @@ class Node implements Comparator<Node> {
 
   // 거리(비용)가 짧은 것이 높은 우선순위를 가지도록 설정
   @Override
-  public int compare(Node node1, Node node2) {
-//    return Integer.compare(node1.distance, node2.distance);
-
-    if (node1.distance < node2.distance) {
-      return -1;
-    } else if (node1.distance == node2.distance) {
-      return 0;
-    } else {
-      return 1;
-    }
+  public int compareTo(Node other) {
+    return Integer.compare(this.distance, other.distance);
   }
 
 }

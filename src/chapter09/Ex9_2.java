@@ -30,7 +30,6 @@ public class Ex9_2 {
     // 시작 노드로 가기 위한 최단 경로는 0으로 설정하여, 큐에 삽입
     pq.offer(new Node(start, 0));
     d[start] = 0;
-    visited[start] = true;
 
     while(!pq.isEmpty()) { // 큐가 비어있지 않다면
       // 가장 최단 거리가 짧은 노드에 대한 정보 꺼내기
