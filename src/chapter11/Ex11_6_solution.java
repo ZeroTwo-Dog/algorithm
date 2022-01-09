@@ -80,7 +80,7 @@ public class Ex11_6_solution {
 
   public static void main(String[] args) {
     int[] food_times = {4,2,3,6,7,1,5,8};
-    long k =27;
+    long k =16;
     System.out.println(solution(food_times, k));
   }
 }
