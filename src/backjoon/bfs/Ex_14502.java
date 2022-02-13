@@ -10,6 +10,8 @@ import java.util.Scanner;
  */
 public class Ex_14502 {
 
+
+  //2채울때 큐에 명확하게 넣기위한 클래스 int[] 로 해도 무방하긴함.
   static class Xy {
     int x;
     int y;
@@ -53,16 +55,20 @@ public class Ex_14502 {
     }
   }
 
+
+  // 2채우기
   public static void bfs() {
     int[][] virusMap = new int[n][m];
     Queue<Xy> queue = new LinkedList<>();
 
+    //그냥 바이러스 맵에 할당하면 map도 동기화 되서 하나하나 할당해야함
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
         virusMap[i][j] = map[i][j];
       }
     }
 
+    //초기 바이러스 위치 저장
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
         if (virusMap[i][j] == VIRUS) {
@@ -92,6 +98,7 @@ public class Ex_14502 {
 
   }
 
+  //생존칸이 많은 결과 찾기
   public static void result (int[][] virusMap) {
 
     int cnt = 0;
@@ -108,7 +115,6 @@ public class Ex_14502 {
   }
 
 
-  // 2채우기
 
 
   public static void main(String[] args) {
