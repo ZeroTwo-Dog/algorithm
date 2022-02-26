@@ -14,6 +14,7 @@ import java.util.Scanner;
  */
 public class Ex_3190 {
 
+  //뱀 꼬리를 알기위해서 설정 num이 min 일때 꼬리
   static class Snake implements Comparable <Snake>{
     int x;
     int y;
@@ -36,9 +37,9 @@ public class Ex_3190 {
 
 
   public static int n = 2;
-  public static int[][] graph = new int[100][100];
+  public static int[][] graph = new int[101][101];
 
-  public static boolean[][] apples = new boolean[100][100];
+  public static boolean[][] apples = new boolean[101][101];
 
 
   public static int dir = 4;
@@ -105,6 +106,7 @@ public class Ex_3190 {
 
   }
 
+  //뱀 사과 취식여부
   public static void checkAppleEat(int x, int y , Snake snake) {
     //사과를 안만을때
     if (!apples[x][y]) {
@@ -154,6 +156,7 @@ public class Ex_3190 {
 
   }
 
+  //범위밖 이동
   public static boolean breakXy (int x, int y) {
     if ( x <= 0 || x > n || y <= 0 || y > n) {
       time++;
@@ -162,6 +165,7 @@ public class Ex_3190 {
     return true;
   }
 
+  // 뱀이 자기 머리를 제외한 몸통을 만났을때
   public static boolean breakContackSnake(int x, int y) {
     for ( int i = 0; i < snakeList.size(); i++ ) {
       if (i < snakeList.size() - 1) {
@@ -205,6 +209,7 @@ public class Ex_3190 {
     Object[] mapkey = directionMap.keySet().toArray();
     Arrays.sort(mapkey);
 
+    //초기 세팅
     snakeList.add(new Snake(1,1, 1));
 
 
