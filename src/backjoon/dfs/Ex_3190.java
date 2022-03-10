@@ -37,14 +37,14 @@ public class Ex_3190 {
 
 
   public static int n = 2;
-  public static int[][] graph = new int[101][101];
 
   public static boolean[][] apples = new boolean[101][101];
 
 
   public static int dir = 4;
 
-  //
+  //상수화가 아니라 dx,dy int[], int[] 로 상하좌우 움직이는걸 배열로 해서 해서 dir를 이용했으면 if문 처리가 간단해졌을듯
+  //if문 처리가 너무 지저분함....
   public final static int RIGHT = 4;
   public final static int LEFT = 3;
   public final static int UP = 1;
@@ -70,9 +70,12 @@ public class Ex_3190 {
     selectSnakeDir(directionMap);
 
 
+    //꼬리
     Snake min = snakeList.stream().min(Snake::compareTo).get();
+    //머리
     int max = snakeList.stream().min(Snake::compareTo).get().num;
 
+    //이동로직
     if (dir == RIGHT) {
       snakeList.add(new Snake(x,y+1,max+1));
       //사과를 안만을때
@@ -110,6 +113,7 @@ public class Ex_3190 {
   public static void checkAppleEat(int x, int y , Snake snake) {
     //사과를 안만을때
     if (!apples[x][y]) {
+      //근데 무조건 remove는 0 인덱스가 꼬리였음..... 너무 복잡하게 생각함
       snakeList.remove(snake);
     } else {
       apples[x][y] =false;
@@ -120,6 +124,7 @@ public class Ex_3190 {
   public static void selectSnakeDir (Map<Integer, String> directionMap) {
     for (Map.Entry<Integer, String> map : directionMap.entrySet()) {
       if (time == map.getKey()) {
+        //방향전환 String 공백제거 필요 .trim()
         if (map.getValue().equals(" D")) {
           if (dir == RIGHT) {
             dir = DOWN;
@@ -202,12 +207,12 @@ public class Ex_3190 {
     for (int i = 0; i < l; i++) {
       int key = scan.nextInt();
       String value = scan.nextLine();
+      //넣기전에 공백제거 .trim()
       directionMap.put(key, value);
     }
 
     // 키로 정렬
-    Object[] mapkey = directionMap.keySet().toArray();
-    Arrays.sort(mapkey);
+    Arrays.sort(directionMap.keySet().toArray());
 
     //초기 세팅
     snakeList.add(new Snake(1,1, 1));

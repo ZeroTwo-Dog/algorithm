@@ -1,11 +1,8 @@
 package backjoon.dfs;
 
-import java.util.ArrayList;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /**
@@ -27,8 +24,24 @@ public class Ex_2606 {
       }
 
     }
-
   }
+
+// bfs
+//  public static void bfs(int i,int[][] graphs,boolean[] visited) {
+//    Queue<Integer> q = new LinkedList<Integer>();
+//    q.offer(i);
+//    visited[i] = true;
+//    while(!q.isEmpty()) {
+//      int temp = q.poll();
+//
+//      for(int k=1; k<=graphs.length; k++) {
+//        if(graphs[temp][k] == 1 && !visited[k]) {
+//          q.offer(k);
+//          visited[k] = true;
+//        }
+//      }
+//    }
+//  }
 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
