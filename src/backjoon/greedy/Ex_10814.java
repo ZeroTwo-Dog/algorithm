@@ -1,4 +1,4 @@
-package backjoon;
+package backjoon.greedy;
 
 import java.util.ArrayList;
 import java.util.Comparator;
