@@ -1,4 +1,4 @@
-package backjoon;
+package codility;
 
 import java.util.Scanner;
 
